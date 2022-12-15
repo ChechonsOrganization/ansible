@@ -1,0 +1,4 @@
+---
+- lineinfile:
+    line: "10.0.1.90 nagios.example.com"
+    path: /etc/hosts
