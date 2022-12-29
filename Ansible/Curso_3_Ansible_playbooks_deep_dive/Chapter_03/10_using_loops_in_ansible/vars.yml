@@ -1,0 +1,11 @@
+working_dir: /home/sergiowsl/documents/Sergio/ansible/Ansible/Curso_3_Ansible_playbooks_deep_dive/Chapter_03/10_using_loops_in_ansible/working
+
+service_list:
+- httpd
+- nfs
+- mariadb
+
+share_paths:
+  ansible: /etc/ansible/hosts
+  cifs: /mnt/cifs
+  iscsi: /mnt/iscsi

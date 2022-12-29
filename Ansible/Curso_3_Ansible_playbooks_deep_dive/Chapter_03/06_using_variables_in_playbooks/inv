@@ -1,0 +1,12 @@
+localhost 127.0.0.1
+
+[remote]
+scoldham2 ansible_host=scoldham2c.mylabserver.com
+scoldham3 ansible_host=scoldham3c.mylabserver.com
+
+[centos]
+localhost
+scoldham2 ansible_host=scoldham2c.mylabserver.com
+
+[ubuntu]
+scoldham3c ansible_host=scoldham3c.mylabserver.com

@@ -1,0 +1,13 @@
+--- # play example
+- hosts: localhost
+  become: yes # privileges
+  tasks:
+    # prepare system for operational use
+    - name: install cli web client
+      yum: 
+        name: elinks
+        state: latest
+    - name: install network utilities
+      yum:
+        name: nmap-ncat
+        state: latest

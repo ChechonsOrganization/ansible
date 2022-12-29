@@ -1,0 +1,1 @@
+{"cmd": ["ls", "-la", "/etc/ansible/hosts"], "stdout": "-rw-r--r-- 1 root root 1006 Dec 19 12:48 /etc/ansible/hosts", "stderr": "", "rc": 0, "start": "2022-12-28 16:21:21.428579", "end": "2022-12-28 16:21:21.429837", "delta": "0:00:00.001258", "changed": true, "stdout_lines": ["-rw-r--r-- 1 root root 1006 Dec 19 12:48 /etc/ansible/hosts"], "stderr_lines": [], "failed": false}

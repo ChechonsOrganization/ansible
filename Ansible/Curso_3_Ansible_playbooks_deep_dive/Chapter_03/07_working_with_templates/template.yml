@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  gather_facts: no # ansible-playbook to run little quicker for our porpuses
+  become: yes # to scalate to root privileges
+  vars:
+    code_name: whisky
+    version: 4.2
+  tasks:
+    - name: deploy config file
+    template:
+      src: config.j2
+      dest: /opt/config

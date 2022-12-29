@@ -1,0 +1,13 @@
+--- # ansible conditional example
+- hosts: localhost
+  vars:
+    target_file: /home/sergiowsl/documents/Sergio/ansible/Ansible/Curso_3_Ansible_playbooks_deep_dive/Chapter_03/09_conditional_execution_in_playbooks/hostname
+  tasks:
+    - name: gather file information
+      stat:
+        path: "{{ target_file }}"
+      register: hostname
+
+    - name: Rename hostname when found
+      command: mv "{{ target_file }}" /home/sergiowsl/documents/Sergio/ansible/Ansible/Curso_3_Ansible_playbooks_deep_dive/Chapter_03/09_conditional_execution_in_playbooks/net-info
+      when: hostname.stat.exists  #>= == # hostname['stat']['exists'] #not

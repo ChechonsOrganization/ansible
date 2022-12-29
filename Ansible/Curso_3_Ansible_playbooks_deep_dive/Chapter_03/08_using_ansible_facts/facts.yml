@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  tasks:
+    - name: create a file
+      lineinfile:
+        path: /home/sergiowsl/documents/Sergio/ansible/Ansible/Curso_3_Ansible_playbooks_deep_dive/Chapter_03/08_using_ansible_facts/hostname
+        create: yes
+        line: "{{  ansible_hostname }}"
+
+    - name: access magic variable
+      lineinfile:
+        path: /home/sergiowsl/documents/Sergio/ansible/Ansible/Curso_3_Ansible_playbooks_deep_dive/Chapter_03/08_using_ansible_facts/hostname
+        line: "{{ hostvars['localhost']['ansible_default_ipv4']['address'] }}"
+        # other magic variables are groups, group_name, and inventory hostname
